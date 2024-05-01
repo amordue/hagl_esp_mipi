@@ -42,27 +42,37 @@ extern "C" {
 
 #ifdef CONFIG_MIPI_DCS_PIXEL_FORMAT_24BIT_SELECTED
 typedef uint32_t hagl_color_t;
+#define HAGL_COLOR_TYPE_DEFINED
 #endif
 
 #ifdef CONFIG_MIPI_DCS_PIXEL_FORMAT_18BIT_SELECTED
 typedef uint32_t hagl_color_t;
+#define HAGL_COLOR_TYPE_DEFINED
 #endif
 
 #ifdef CONFIG_MIPI_DCS_PIXEL_FORMAT_16BIT_SELECTED
 /* Currently only this, ie. RGB565 is properly tested. */
 typedef uint16_t hagl_color_t;
+#define HAGL_COLOR_TYPE_DEFINED
 #endif
 
 #ifdef CONFIG_MIPI_DCS_PIXEL_FORMAT_12BIT_SELECTED
 typedef uint16_t hagl_color_t;
+#define HAGL_COLOR_TYPE_DEFINED
 #endif
 
 #ifdef CONFIG_MIPI_DCS_PIXEL_FORMAT_8BIT_SELECTED
 typedef uint8_t hagl_color_t;
+#define HAGL_COLOR_TYPE_DEFINED
 #endif
 
 #ifdef CONFIG_MIPI_DCS_PIXEL_FORMAT_3BIT_SELECTED
 typedef uint8_t hagl_color_t;
+#define HAGL_COLOR_TYPE_DEFINED
+#endif
+
+#ifndef HAGL_COLOR_TYPE_DEFINED
+typedef uint32_t hagl_color_t;
 #endif
 
 #ifdef __cplusplus
