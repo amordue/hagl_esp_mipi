@@ -182,7 +182,7 @@ static void mipi_display_spi_master_init(spi_device_handle_t *spi)
         .quadwp_io_num = -1,
         .quadhd_io_num = -1,
         /* Max transfer size in bytes. */
-        .max_transfer_sz = 32000
+        .max_transfer_sz = 4092
     };
     spi_device_interface_config_t devcfg = {
         .clock_speed_hz = CONFIG_MIPI_DISPLAY_SPI_CLOCK_SPEED_HZ,
